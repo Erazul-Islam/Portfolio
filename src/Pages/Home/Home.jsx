@@ -1,17 +1,20 @@
-import About from "../../Components/About/About";
-import Banner from "../../Components/Banner/Banner";
 import Navbar from "../../Components/Navbar/Navbar";
+import "./app.scss"
 
 const Home = () => {
     return (
         <div>
-            <Navbar></Navbar>
-            <div className="lg:ml-64 lg:mt-64 lg:mr-64">
-                <Banner></Banner>
-                <div className="mt-96">
-                    <About></About>
-                </div>
-            </div>
+            <section id="Homepage">
+                <Navbar></Navbar>
+            </section>
+            <section>Paralax</section>
+            <section id="Portfolio">Paralax</section>
+            <section id="Services">Services</section>
+            <section>portfolio1</section>
+            <section>portfolio2</section>
+            <section>portfolio3</section>
+            <section id="Contact">Contact</section>
+            <section id="About">About</section>
         </div>
     );
 };
