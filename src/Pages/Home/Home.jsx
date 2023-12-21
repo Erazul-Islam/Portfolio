@@ -1,3 +1,4 @@
+import Cursor from "../../Components/Cursor/Cursor";
 import Hero from "../../Components/Hero/Hero";
 import Navbar from "../../Components/Navbar/Navbar";
 import Parallax from "../../Components/Parallax/Parallax";
@@ -9,6 +10,7 @@ import "./app.scss"
 const Home = () => {
     return (
         <div>
+            <Cursor></Cursor>
             <section id="Homepage">
                 <Navbar></Navbar>
                 <Hero></Hero>
@@ -18,7 +20,7 @@ const Home = () => {
             <section id="Portfolio"> <Parallax type="portfolio"></Parallax> </section>
             <Portfolio></Portfolio>
             <section id="Contact"> <Contact></Contact> </section>
-            <section id="About">About</section>
+            {/* <section id="About">About</section> */}
         </div>
     );
 };

@@ -13,7 +13,7 @@ const variants = {
         opacity: 1,
         transition: {
             duration: 0.5,
-            staggerChildren: 0.1
+            staggerChildren: 0.2
         }
     }
 }
@@ -81,11 +81,11 @@ const Contact = () => {
                         />
                     </svg>
                 </motion.div>
-                <motion.form onSubmit={sendEmail} ref={formRef} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 4, duration: 1 }} className="flex flex-col gap-5">
+                <motion.form onSubmit={sendEmail} ref={formRef} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 3, duration: 1 }} className="flex flex-col gap-5">
                     <input className="p-5 rounded-lg bg-transparent text-white border-solid border-white" type="text" required placeholder="Name" name="name" />
                     <input className="p-5 rounded-lg bg-transparent text-white border-solid border-white" type="email" required placeholder="Email" name="email" />
                     <textarea className="p-5 rounded-lg bg-transparent text-white border-solid border-white" placeholder="Message" name="message" rows={8}></textarea>
-                    <button className="p-5 border-none rounded-lg bg-orange-500 cursor-pointer">Submt</button>
+                    <button className="p-5 border-none rounded-lg bg-orange-500 cursor-pointer">Submit</button>
                     {error && "Error"}
                     {success && "Success"}
                 </motion.form>
