@@ -18,7 +18,9 @@ const Home = () => {
             <section id="Services"> <Parallax type="services"></Parallax> </section>
             <section> <Services></Services> </section>
             <section id="Portfolio"> <Parallax type="portfolio"></Parallax> </section>
-            <Portfolio></Portfolio>
+            <section>
+                <Portfolio></Portfolio>
+            </section>
             <section id="Contact"> <Contact></Contact> </section>
             {/* <section id="About">About</section> */}
         </div>
