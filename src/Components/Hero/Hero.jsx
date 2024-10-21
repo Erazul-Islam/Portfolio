@@ -60,11 +60,9 @@ const Hero = () => {
             initial="initial"
             animate="animate"
             className="slidingText">
-                Writer Content Creator influencer
+                I lOVE WEB-DEVELOPMENT
             </motion.div>
-            <div className="imageContainer">
-                <img src="https://i.ibb.co/SQ5Bmc3/hero.png" alt="" />
-            </div>
+            {/* <img className="lg:ml-[1000px]" src="https://i.ibb.co.com/ZYTVfbJ/Fiverr-removebg-preview.png" alt="" /> */}
         </div >
     );
 };

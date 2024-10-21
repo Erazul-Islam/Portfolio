@@ -2,6 +2,7 @@ import Cursor from "../../Components/Cursor/Cursor";
 import Hero from "../../Components/Hero/Hero";
 import Navbar from "../../Components/Navbar/Navbar";
 import Parallax from "../../Components/Parallax/Parallax";
+import Jerins from "../../Components/Portfolio/Jerins";
 import Portfolio from "../../Components/Portfolio/Portfolio";
 import Services from "../../Components/Services/Services";
 import Contact from "./Contact/Contact";
@@ -20,6 +21,9 @@ const Home = () => {
             <section id="Portfolio"> <Parallax type="portfolio"></Parallax> </section>
             <section>
                 <Portfolio></Portfolio>
+            </section>
+            <section>
+                <Jerins></Jerins>
             </section>
             <section id="Contact"> <Contact></Contact> </section>
             {/* <section id="About">About</section> */}
