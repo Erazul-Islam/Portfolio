@@ -20,6 +20,7 @@ const Navbar = () => {
                     </a> */}
                     <Link to='/introduction'>  <motion.div className="ml-36 text-xl font-bold lg:ml-0 " initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} >Introduction</motion.div></Link>
                     <a download='resume.pdf' href="/src/assets/resume.pdf"><button className="btn bg-indigo-800">Resume download</button></a>
+                    <Link to='/signup'>Signup</Link>
                 </div>
             </div>
         </div>

@@ -7,7 +7,7 @@ import {
     fetchBaseQuery,
   } from '@reduxjs/toolkit/query/react';
   import { RootState } from '../store';
-import { logout, setUser } from '../feature/auth/authSignup';
+import { logout, setUser } from '../feature/auth/authSlice';
 
   
   const baseQuery = fetchBaseQuery({
