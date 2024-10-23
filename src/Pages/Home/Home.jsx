@@ -22,7 +22,7 @@ const Home = () => {
                 <Portfolio></Portfolio>
             </section>
             <section id="Contact"> <Contact></Contact> </section>
-            {/* <section id="About">About</section> */}
+            {/* <section id="About"> <About></About> </section> */}
         </div>
     );
 };

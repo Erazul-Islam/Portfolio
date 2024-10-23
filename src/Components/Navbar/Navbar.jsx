@@ -24,16 +24,6 @@ const Navbar = () => {
                     <Sidebar />
                     <div className="flex items-center gap-6">
                         <div className="hidden lg:flex gap-8">
-                            {/* <Link to="/introduction">
-                                <motion.div
-                                    className="text-xl font-semibold text-gray-700 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400"
-                                    initial={{ opacity: 0, scale: 0.5 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ duration: 0.5 }}
-                                >
-                                    Introduction
-                                </motion.div>
-                            </Link> */}
                             <div>
                                 {user ? <button onClick={handleLogout} className="btn bg-indigo-600 text-white px-4 py-2 rounded-sm hover:bg-indigo-700 transition-all duration-300">Logout</button> : <Link to='/login'><button className="btn bg-indigo-600 text-white px-4 py-2 rounded-sm hover:bg-indigo-700 transition-all duration-300">Login</button></Link>}
                             </div>
@@ -43,9 +33,14 @@ const Navbar = () => {
                             <div>
                                 {user?.role === "USER" ? <Link to='/userdashboard'><button className="btn bg-indigo-600 text-white px-4 py-2 rounded-sm hover:bg-indigo-700 transition-all duration-300">Dashboard</button></Link> : ''}
                             </div>
+                            <div>
+                                <Link to='/about'>
+                                    <button className="btn bg-indigo-600 text-white px-4 py-2 rounded-sm hover:bg-indigo-700 transition-all duration-300">About</button>
+                                </Link>
+                            </div>
                             <a
                                 download="resume.pdf"
-                                href="/src/assets/resume.pdf"
+                                href="https://drive.google.com/file/d/16XeTVzSrGrvVNNPid5NKmmlx3GeHV7eS/view?usp=drive_link"
                                 className="text-xl font-semibold text-gray-700 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400"
                             >
                                 <button className="btn bg-indigo-600 text-white px-4 py-2 rounded-sm hover:bg-indigo-700 transition-all duration-300">

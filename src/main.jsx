@@ -14,6 +14,7 @@ import { store } from './redux/store';
 import Login from './Pages/login/Login';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import UserDashboard from './Pages/Dashboard/userDashboard';
+import About from './Components/About/About';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: '/userDashboard',
         element: <UserDashboard />
+      },
+      {
+        path: '/about',
+        element: <About />
       }
     ]
   },
