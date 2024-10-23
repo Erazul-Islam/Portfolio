@@ -21,14 +21,14 @@ const Contact = () => {
 
     const ref = useRef()
     const formRef = useRef();
-    const [error,setError] = useState(false)
-    const [success,setSuccess] = useState(false)
+    const [error, setError] = useState(false)
+    const [success, setSuccess] = useState(false)
     const isInView = useInView(ref, { margin: "-100px" })
 
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_fjgysjg', 'template_lfi5s9x', formRef.current, '_h7WSz0zA-C7JJLVB')
+        emailjs.sendForm("service_fjgysjg", "template_lfi5s9x", formRef.current, '_h7WSz0zA-C7JJLVB')
             .then((result) => {
                 setSuccess(true)
                 console.log(result)
@@ -56,7 +56,7 @@ const Contact = () => {
                 </motion.div>
             </motion.div>
             <div className="flex-1 relative">
-                <motion.div className=" -z-[1] stroke-orange-400 absolute m-auto" initial={{ opacity: 1 }} whileInView={{ opacity: 0 }} transition={{ delay: 3, duration: 1 }} >
+                <motion.div className=" z-0 stroke-orange-400 absolute m-auto" initial={{ opacity: 1 }} whileInView={{ opacity: 0 }} transition={{ delay: 3, duration: 1 }} >
                     <svg width="450px" height="450px" viewBox="0 0 32.666 32.666">
                         <motion.path
                             strokeWidth={0.2}
@@ -85,8 +85,8 @@ const Contact = () => {
                     <input className="p-5 rounded-lg bg-transparent text-white border-solid border-white" type="email" required placeholder="Email" name="email" />
                     <textarea className="p-5 rounded-lg bg-transparent text-white border-solid border-white" placeholder="Message" name="message" rows={8}></textarea>
                     <button className="p-5 border-none rounded-lg bg-orange-500 cursor-pointer">Submit</button>
-                    {error && "Error"}
-                    {success && "Success"}
+                    {error && "error"}
+                    {success && "Wow, Success"}
                 </motion.form>
             </div>
         </motion.div>

@@ -8,15 +8,11 @@ import { verifyToken } from "../../utils/verifyToken";
 const Navbar = () => {
 
     const dispatch = useAppDispatch();
-
     const handleLogout = () => {
         dispatch(logout());
     };
-
     const token = useAppSelector(useCurrentToken);
-
     let user;
-
     if (token) {
         user = verifyToken(token);
     }
@@ -57,8 +53,6 @@ const Navbar = () => {
 
                     </div>
                 </div>
-
-
             </div>
         </div>
     );
