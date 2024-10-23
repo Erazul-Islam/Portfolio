@@ -29,8 +29,8 @@ const Login = () => {
             }
             const res = await login(userInfo).unwrap()
             console.log(res)
-            const { token, data: user } = res
-            dispatch(setUser({ user: res.data, token: res.token }))
+            const {  data: user } = res
+            dispatch(setUser({ user: res.data, token: res.accessToken }))
             Swal.fire({
                 title: "Good job!",
                 text: "Login Successfully",
