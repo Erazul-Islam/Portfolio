@@ -88,3 +88,41 @@
         font-weight:bold ;
     }
 }
+
+.profileImageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    @include mobile {
+        top: 00px;
+        width: 400px;
+    }
+
+    .profileImage {
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        border: 8px solid;
+        border-color: #ff6a6a;
+        animation: borderAnimation 3s infinite linear;
+    }
+
+    @keyframes borderAnimation {
+        0% {
+            border-color: #ff6a6a;
+        }
+        25% {
+            border-color: #ffa500; 
+        }
+        50% {
+            border-color: #f0e68c; 
+        }
+        75% {
+            border-color: #90ee90; 
+        }
+        100% {
+            border-color: #87cefa;
+        }
+    }
+}

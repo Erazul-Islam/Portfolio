@@ -40,6 +40,9 @@ const Navbar = () => {
                             <div>
                                 {user?.role === "ADMIN" ? <Link to='/dashboard'><button className="btn bg-indigo-600 text-white px-4 py-2 rounded-sm hover:bg-indigo-700 transition-all duration-300">Admin Dashboard</button></Link> : ''}
                             </div>
+                            <div>
+                                {user?.role === "USER" ? <Link to='/userdashboard'><button className="btn bg-indigo-600 text-white px-4 py-2 rounded-sm hover:bg-indigo-700 transition-all duration-300">Dashboard</button></Link> : ''}
+                            </div>
                             <a
                                 download="resume.pdf"
                                 href="/src/assets/resume.pdf"
