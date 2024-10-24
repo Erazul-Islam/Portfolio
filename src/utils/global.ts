@@ -10,6 +10,10 @@ export type TError = {
 };
 
 export type TProject = {
+    description: any;
+    caption: string | undefined;
+    // description: ReactNode;
+    photo: string | undefined;
     _id : string,
     details : string,
     link : string,

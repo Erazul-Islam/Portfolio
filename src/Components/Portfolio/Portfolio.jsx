@@ -6,6 +6,7 @@ const Portfolio = () => {
 
     const { data } = useGetAllProjectQuery()
 
+
     const projects = data?.data
 
     return (

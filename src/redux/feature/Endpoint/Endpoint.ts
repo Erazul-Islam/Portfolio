@@ -39,8 +39,45 @@ const authApi = baseApi.injectEndpoints({
                     };
                 },
             }),
+            deleteblog: builder.mutation({
+                query: (id) => ({
+                    url: `/blog/${id}`,
+                    method: 'DELETE'
+                })
+            }),
+            updateBlog: builder.mutation({
+                query: ({ blogId, data }) => ({
+                    url: `blog/${blogId}`,
+                    method: 'PUT',
+                    body: data
+                })
+            }),
+            updateProject: builder.mutation({
+                query: ({ projectId, data }) => ({
+                    url: `project/${projectId}`,
+                    method: 'PUT',
+                    body: data
+                })
+            }),
+            deleteProject: builder.mutation({
+                query: (id) => ({
+                    url: `/project/${id}`,
+                    method: 'DELETE'
+                })
+            }),
         }
     )
 })
 
-export const { useCreateBlogMutation,useCreateProjectMutation,useGetAllBlogsQuery,useGetAllProjectQuery } = authApi
+export const {
+
+    useCreateBlogMutation,
+    useCreateProjectMutation,
+    useGetAllBlogsQuery,
+    useGetAllProjectQuery,
+    useDeleteblogMutation,
+    useUpdateBlogMutation,
+    useUpdateProjectMutation,
+    useDeleteProjectMutation
+
+} = authApi
