@@ -9,6 +9,12 @@ export type TError = {
     status: number;
 };
 
+export type TProject = {
+    _id : string,
+    details : string,
+    link : string,
+    image: string
+}
 
 export type TUser = {
     _id: string,

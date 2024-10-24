@@ -24,7 +24,7 @@ const Dashboard = () => {
                     </div>
                     <Menu theme="dark" mode="inline" defaultSelectedKeys={['profile']}>
                         <Menu.Item key="blog" icon={<UserOutlined />}>
-                            <Link to="/admin/dashboard/blog">Profile</Link>
+                            <Link to="/admin/dashboard/blog">Blog</Link>
                         </Menu.Item>
                     </Menu>
                     <Menu theme="dark" mode="inline" defaultSelectedKeys={['project']}>

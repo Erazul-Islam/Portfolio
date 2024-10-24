@@ -1,3 +1,4 @@
+import { TProject, TResponseRedux } from "../../../utils/global";
 import { baseApi } from "../../api/baseApi";
 
 
@@ -17,9 +18,29 @@ const authApi = baseApi.injectEndpoints({
                     method: 'POST',
                     body: newProject
                 })
-            })
+            }),
+            getAllProject: builder.query({
+                query: () => {
+                    return { url: '/project', method: 'GET' };
+                },
+                transformResponse: (response: TResponseRedux<TProject[]>) => {
+                    return {
+                        data: response.data
+                    };
+                },
+            }),
+            getAllBlogs: builder.query({
+                query: () => {
+                    return { url: '/blog', method: 'GET' };
+                },
+                transformResponse: (response: TResponseRedux<TProject[]>) => {
+                    return {
+                        data: response.data
+                    };
+                },
+            }),
         }
     )
 })
 
-export const { useCreateBlogMutation,useCreateProjectMutation } = authApi
+export const { useCreateBlogMutation,useCreateProjectMutation,useGetAllBlogsQuery,useGetAllProjectQuery } = authApi

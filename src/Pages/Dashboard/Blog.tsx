@@ -8,6 +8,7 @@ const Blog = () => {
 
     const [createBlog] = useCreateBlogMutation();
     const [caption, setCaption] = useState('');
+    const [photo, setPhoto] = useState('');
     const [description, setDescription] = useState('');
     const [loading, setLoading] = useState(false);
 
@@ -15,7 +16,7 @@ const Blog = () => {
         e.preventDefault();
         setLoading(true);
         try {
-            const blogData = { caption, description };
+            const blogData = { caption, description,photo };
             await createBlog(blogData).unwrap();
             Swal.fire({
                 title: "Good job!",
@@ -24,6 +25,7 @@ const Blog = () => {
             });
             setCaption('');
             setDescription('');
+            setPhoto('')
         } catch (error) {
             console.error('Failed to create blog:', error);
             Swal.fire({
@@ -47,10 +49,18 @@ const Blog = () => {
                 <div className="mb-4">
                     <input
                         type="text"
-                        className="w-full p-3 border bg-purple-700 text-white border-gray-300 rounded-sm shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none transition duration-300"
+                        className="w-full p-3 border  text-white border-gray-300 rounded-sm shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none transition duration-300"
                         placeholder="Enter a catchy caption"
                         value={caption}
                         onChange={(e) => setCaption(e.target.value)}
+                        required
+                    />
+                    <input
+                        type="text"
+                        className="w-full p-3 border mt-4  text-white border-gray-300 rounded-sm shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none transition duration-300"
+                        placeholder="Enter a blog photo url"
+                        value={photo}
+                        onChange={(e) => setPhoto(e.target.value)}
                         required
                     />
                 </div>

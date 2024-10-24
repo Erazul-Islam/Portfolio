@@ -1,3 +1,4 @@
+import BlogDetail from "../../Components/BlogDetail/BlogDetail";
 import Cursor from "../../Components/Cursor/Cursor";
 import Hero from "../../Components/Hero/Hero";
 import Navbar from "../../Components/Navbar/Navbar";
@@ -21,8 +22,10 @@ const Home = () => {
             <section>
                 <Portfolio></Portfolio>
             </section>
-            <section id="Contact"> <Contact></Contact> </section>
-            {/* <section id="About"> <About></About> </section> */}
+            <section className="md:hidden">
+            </section>
+            <section> <BlogDetail /> </section>
+            <section id="Contact"><Contact></Contact></section>
         </div>
     );
 };
