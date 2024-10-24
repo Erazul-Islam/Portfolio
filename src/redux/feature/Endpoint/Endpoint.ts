@@ -10,9 +10,16 @@ const authApi = baseApi.injectEndpoints({
                     method: 'POST',
                     body: newPost
                 })
+            }),
+            createProject: builder.mutation({
+                query: (newProject) => ({
+                    url: '/project',
+                    method: 'POST',
+                    body: newProject
+                })
             })
         }
     )
 })
 
-export const { useCreateBlogMutation } = authApi
+export const { useCreateBlogMutation,useCreateProjectMutation } = authApi

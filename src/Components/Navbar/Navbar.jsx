@@ -28,7 +28,7 @@ const Navbar = () => {
                                 {user ? <button onClick={handleLogout} className="btn bg-indigo-600 text-white px-4 py-2 rounded-sm hover:bg-indigo-700 transition-all duration-300">Logout</button> : <Link to='/login'><button className="btn bg-indigo-600 text-white px-4 py-2 rounded-sm hover:bg-indigo-700 transition-all duration-300">Login</button></Link>}
                             </div>
                             <div>
-                                {user?.role === "ADMIN" ? <Link to='/dashboard'><button className="btn bg-indigo-600 text-white px-4 py-2 rounded-sm hover:bg-indigo-700 transition-all duration-300">Admin Dashboard</button></Link> : ''}
+                                {user?.role === "ADMIN" ? <Link to='/admin/dashboard'><button className="btn bg-indigo-600 text-white px-4 py-2 rounded-sm hover:bg-indigo-700 transition-all duration-300">Admin Dashboard</button></Link> : ''}
                             </div>
                             <div>
                                 {user?.role === "USER" ? <Link to='/userdashboard'><button className="btn bg-indigo-600 text-white px-4 py-2 rounded-sm hover:bg-indigo-700 transition-all duration-300">Dashboard</button></Link> : ''}
