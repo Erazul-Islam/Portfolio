@@ -56,7 +56,7 @@ const authApi = baseApi.injectEndpoints({
                 query: ({ projectId, data }) => ({
                     url: `project/${projectId}`,
                     method: 'PUT',
-                    body: data
+                    body:  data 
                 })
             }),
             deleteProject: builder.mutation({

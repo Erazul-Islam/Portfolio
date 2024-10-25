@@ -63,6 +63,10 @@ const router = createBrowserRouter([
       {
         path: '/admin/dashboard/project',
         element: <Project />
+      },
+      {
+        path: '/admin/dashboard/skills',
+        element: <Project />
       }
     ]
   }

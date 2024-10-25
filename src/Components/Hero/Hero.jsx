@@ -62,7 +62,6 @@ const Hero = () => {
                 className="slidingText">
                 I lOVE WEB-DEVELOPMENT
             </motion.div>
-            {/* <img className="lg:ml-[1000px]" src="https://i.ibb.co.com/ZYTVfbJ/Fiverr-removebg-preview.png" alt="" /> */}
             <motion.div
                 className="profileImageContainer"
                 initial={{ opacity: 0, scale: 0.5 }}

@@ -14,11 +14,14 @@ const AdminProject = () => {
     const [updateProject] = useUpdateBlogMutation()
     const [form] = Form.useForm();
 
-    const showUpdateModal = (blog) => {
-        setCurrentBlog(blog);
+    const showUpdateModal = (project) => {
+        setCurrentBlog(project);
         form.setFieldsValue({
-            caption: blog.caption,
-            photo: blog.photo,
+            details: project.details,
+            link: project.link,
+            image: project.image,
+            client: project.client,
+            backend: project.backend
         });
         setIsModalOpen(true);
     };
@@ -31,10 +34,10 @@ const AdminProject = () => {
         const updatedValues = {
             ...values,
         };
-        console.log(updatedValues)
+
         try {
             const x = await updateProject({ projectId: currentBlog?._id, data: updatedValues }).unwrap();
-            console.log(x)
+            // console.log('x',x)
             refetch();
             Swal.fire({
                 title: "Good job!",
@@ -134,7 +137,8 @@ const AdminProject = () => {
                                         </a>
                                     </div>
                                     <div className='flex mt-4 mb-4 justify-around'>
-                                        <button onClick={() => showUpdateModal(project)} className='btn bg-indigo-700 border-none rounded-sm '>Update</button> <button onClick={() => handleDelete(project._id)} className='btn bg-indigo-700 border-none rounded-sm '>Delete</button>
+                                        {/* <button onClick={() => showUpdateModal(project)} className='btn bg-indigo-700 border-none rounded-sm '>Update</button> */}
+                                         <button onClick={() => handleDelete(project._id)} className='btn bg-indigo-700 border-none rounded-sm '>Delete</button>
                                     </div>
                                 </div>
                             </div>
@@ -163,13 +167,13 @@ const AdminProject = () => {
                     </Form.Item>
                     <Form.Item
                         label="Photo URL"
-                        name="photo"
+                        name="image"
                     >
                         <Input />
                     </Form.Item>
                     <Form.Item
                         label="Client"
-                        name="Client"
+                        name="client"
                     >
                         <Input />
                     </Form.Item>

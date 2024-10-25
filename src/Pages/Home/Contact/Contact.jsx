@@ -41,7 +41,7 @@ const Contact = () => {
     return (
         <motion.div ref={ref} variants={variants} initial="initial" animate="animate" className="h-full lg:ml-96 mr-48 max-w-full m-auto md:flex items-center gap-12">
             <motion.div variants={variants} className="flex-1 flex flex-col gap-10">
-                <motion.h1 variants={variants} className="md:text-8xl font-bold md:leading-[100px]">Let's work together</motion.h1>
+                <motion.h1 variants={variants} className="md:text-8xl font-bold  md:leading-[100px]">Let's work together</motion.h1>
                 <motion.div variants={variants}>
                     <h2 className="">Mail</h2>
                     <span className="font-light">erazul89@gmail.com</span>

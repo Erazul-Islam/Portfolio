@@ -1,6 +1,5 @@
 import React from 'react';
 import Cursor from '../../Components/Cursor/Cursor';
-import Project from './Project';
 import { Avatar, Layout, Menu } from 'antd';
 import Sider from 'antd/es/layout/Sider';
 import { useAppSelector } from '../../redux/hook';
@@ -8,7 +7,9 @@ import { RootState } from '../../redux/store';
 import { Link, Outlet } from 'react-router-dom';
 import { Content, Header } from 'antd/es/layout/layout';
 import { UserOutlined } from '@ant-design/icons';
-
+import { FaBlogger, FaHome } from "react-icons/fa";
+import { FaRProject } from "react-icons/fa6";
+import { GiSkills } from "react-icons/gi";
 const Dashboard = () => {
 
     const user = useAppSelector((state: RootState) => state.auth.user)
@@ -22,14 +23,24 @@ const Dashboard = () => {
                         <Avatar size="large" icon={<UserOutlined />} />
                         <h2 style={{ color: 'white', marginTop: '8px' }}>{user?.name}</h2>
                     </div>
-                    <Menu theme="dark" mode="inline" defaultSelectedKeys={['profile']}>
-                        <Menu.Item key="blog" icon={<UserOutlined />}>
+                    <Menu theme="dark" mode="inline" >
+                        <Menu.Item key="blog" icon={<FaBlogger />}>
                             <Link to="/admin/dashboard/blog">Blog</Link>
                         </Menu.Item>
                     </Menu>
-                    <Menu theme="dark" mode="inline" defaultSelectedKeys={['project']}>
-                        <Menu.Item key="project" icon={<UserOutlined />}>
+                    <Menu theme="dark" mode="inline" >
+                        <Menu.Item key="project" icon={<FaRProject />}>
                             <Link to="/admin/dashboard/project">Project</Link>
+                        </Menu.Item>
+                    </Menu>
+                    <Menu theme="dark" mode="inline" >
+                        <Menu.Item key="skill" icon={<GiSkills />}>
+                            <Link to="/admin/dashboard/project">skill</Link>
+                        </Menu.Item>
+                    </Menu>
+                    <Menu theme="dark" mode="inline" >
+                        <Menu.Item key="home" icon={<FaHome />}>
+                            <Link to="/">Home</Link>
                         </Menu.Item>
                     </Menu>
                 </Sider>
