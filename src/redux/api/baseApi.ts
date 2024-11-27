@@ -11,7 +11,7 @@ import { logout, setUser } from '../feature/auth/authSlice';
 
   
   const baseQuery = fetchBaseQuery({
-    baseUrl: 'http://localhost:5000/api',
+    baseUrl: 'https://portfolio-backend-ruby-gamma.vercel.app/api',
     credentials: 'include',
     prepareHeaders: (headers, { getState }) => {
       const token = (getState() as RootState).auth.token;

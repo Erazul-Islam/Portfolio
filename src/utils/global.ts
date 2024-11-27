@@ -10,6 +10,8 @@ export type TError = {
 };
 
 export type TProject = {
+    backend: string | undefined;
+    client: string | undefined;
     description: any;
     caption: string | undefined;
     // description: ReactNode;

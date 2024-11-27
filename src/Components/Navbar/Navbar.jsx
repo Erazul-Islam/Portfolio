@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
-import Sidebar from "../sidebar/sidebar";
 import "./navbar.scss"
-// import { motion } from "framer-motion"
 import { useAppDispatch, useAppSelector } from "../../redux/hook";
 import { logout, useCurrentToken } from "../../redux/feature/auth/authSlice";
 import { verifyToken } from "../../utils/verifyToken";
+import Sidebar from "../Sidebar/Sidebar.jsx"
 const Navbar = () => {
 
     const dispatch = useAppDispatch();
@@ -28,7 +27,7 @@ const Navbar = () => {
                                 {user ? <button onClick={handleLogout} className=" bg-indigo-600 text-white px-4 py-2 rounded-sm hover:bg-indigo-700 transition-all duration-300">Logout</button> : <Link to='/login'><button className=" bg-indigo-600 text-white px-4 py-2 rounded-sm hover:bg-indigo-700 transition-all duration-300">Login</button></Link>}
                             </div>
                             <div>
-                                {user?.role === "ADMIN" ? <Link to='/admin/dashboard'><button className=" bg-indigo-600 mt-2 md:mt-0 text-white px-4 py-2 rounded-sm hover:bg-indigo-700 transition-all duration-300">Admin Dashboard</button></Link> : ''}
+                                {user?.role === "ADMIN" ? <Link to='/admin/dashboard/blog'><button className=" bg-indigo-600 mt-2 md:mt-0 text-white px-4 py-2 rounded-sm hover:bg-indigo-700 transition-all duration-300">Admin Dashboard</button></Link> : ''}
                             </div>
                             <div>
                                 <Link to='/about'>

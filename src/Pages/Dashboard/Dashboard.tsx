@@ -33,11 +33,11 @@ const Dashboard = () => {
                             <Link to="/admin/dashboard/project">Project</Link>
                         </Menu.Item>
                     </Menu>
-                    <Menu theme="dark" mode="inline" >
+                    {/* <Menu theme="dark" mode="inline" >
                         <Menu.Item key="skill" icon={<GiSkills />}>
                             <Link to="/admin/dashboard/project">skill</Link>
                         </Menu.Item>
-                    </Menu>
+                    </Menu> */}
                     <Menu theme="dark" mode="inline" >
                         <Menu.Item key="home" icon={<FaHome />}>
                             <Link to="/">Home</Link>

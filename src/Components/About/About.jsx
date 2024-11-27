@@ -7,7 +7,7 @@ const About = () => {
     return (
         <section className=" py-12">
             <div className="container mx-auto px-4">
-                <h2 className="text-4xl font-bold text-center text-white mb-8">About Us</h2>
+                <h2 className="text-4xl font-bold text-center text-white mb-8">About me</h2>
                 <div className="grid md:grid-cols-2 gap-8">
                     <div className="bg-white shadow-lg rounded-lg p-6">
                         <h3 className="text-2xl  font-semibold text-pink-600 flex items-center">
