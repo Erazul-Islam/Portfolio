@@ -1,27 +1,27 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./navbar.scss"
-import { useAppDispatch, useAppSelector } from "../../redux/hook";
-import { logout, useCurrentToken } from "../../redux/feature/auth/authSlice";
-import { verifyToken } from "../../utils/verifyToken";
+// import { useAppDispatch, useAppSelector } from "../../redux/hook";
+// import { logout, useCurrentToken } from "../../redux/feature/auth/authSlice";
+// import { verifyToken } from "../../utils/verifyToken";
 import Sidebar from "../Sidebar/Sidebar.jsx"
 const Navbar = () => {
 
-    const dispatch = useAppDispatch();
-    const handleLogout = () => {
-        dispatch(logout());
-    };
-    const token = useAppSelector(useCurrentToken);
-    let user;
-    if (token) {
-        user = verifyToken(token);
-    }
+    // const dispatch = useAppDispatch();
+    // const handleLogout = () => {
+    //     dispatch(logout());
+    // };
+    // const token = useAppSelector(useCurrentToken);
+    // let user;
+    // if (token) {
+    //     user = verifyToken(token);
+    // }
 
     return (
         <div className="navbar">
-            <div className="navbar shadow-md fixed w-full z-10">
+            <div className="navbar  fixed w-full z-10">
                 <div className="container mx-auto flex justify-between items-center p-4">
                     <Sidebar />
-                    <div className="flex items-center gap-6">
+                    {/* <div className="flex items-center gap-6">
                         <div className="lg:flex gap-4">
                             <div>
                                 {user ? <button onClick={handleLogout} className=" bg-indigo-600 text-white px-4 py-2 rounded-sm hover:bg-indigo-700 transition-all duration-300">Logout</button> : <Link to='/login'><button className=" bg-indigo-600 text-white px-4 py-2 rounded-sm hover:bg-indigo-700 transition-all duration-300">Login</button></Link>}
@@ -45,7 +45,7 @@ const Navbar = () => {
                             </a>
                         </div>
 
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
